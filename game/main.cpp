@@ -17,9 +17,32 @@ void Setup(){
     score = 0;
 }
 void Draw(){
+    system("cls");
+    for(int i = 0; i < width; i++){
+        cout << "#";
+    }
+    cout << endl;
 
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++){
+            if(j == 0){
+                cout << "#";
+            }
+            else if(j == width -1){
+                cout << "#";
+            }
+            else{
+                cout << " ";
+            }
+        }
+        cout << endl;
+    }
 
-
+    for(int i = 0; i < width; i++){
+        cout << "#";
+    }
+    cout << endl;
 }
 void Input(){
 
@@ -38,7 +61,6 @@ int main()
         Draw();
         Input();
         Logic();
-        Sleep(10);
     }
     return 0;
 }
