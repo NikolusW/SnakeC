@@ -1,5 +1,7 @@
 # depslib dependency file v1.0
-1593619917 source:c:\users\nikol\projects\c++\cppgame\game\main.cpp
+1593621360 source:c:\users\nikol\projects\c++\cppgame\game\main.cpp
 	<iostream>
 	<conio.h>
+	<thread>
+	<chrono>
 
