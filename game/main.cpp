@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include  <conio.h>
 using namespace std;
 bool gameOver;
 const int width = 20;
@@ -51,14 +51,44 @@ void Draw(){
     cout << endl;
 }
 void Input(){
-
-
-
+    if (_kbhit())
+    {
+        switch(_getch())
+        {
+        case 'w':
+            dir = UP;
+            break;
+        case 'a':
+            dir = LEFT;
+            break;
+        case 's':
+            dir = DOWN;
+            break;
+        case 'd':
+            dir = RIGHT;
+            break;
+        case 'x':
+            gameOver = true;
+            break;
+        }
+    }
 }
 void Logic(){
-
-
-
+    switch (dir)
+    {
+    case LEFT:
+        x--;
+        break;
+    case RIGHT:
+        x++;
+        break;
+    case UP:
+        y--;
+        break;
+    case DOWN:
+        y++;
+        break;
+    }
 }
 int main()
 {
