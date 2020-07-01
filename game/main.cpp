@@ -1,5 +1,8 @@
 #include <iostream>
 #include  <conio.h>
+#include <thread>
+#include <chrono>
+
 using namespace std;
 bool gameOver;
 const int width = 20;
@@ -107,6 +110,7 @@ int main()
         Draw();
         Input();
         Logic();
+        std::this_thread::sleep_for(std::chrono::milliseconds(200));
     }
     return 0;
 }
